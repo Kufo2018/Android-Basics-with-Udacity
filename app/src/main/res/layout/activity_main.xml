@@ -1,0 +1,659 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:baselineAligned="false"
+    tools:context=".MainActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:baselineAligned="false"
+        android:orientation="horizontal">
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="12dp"
+                android:fontFamily="sans-serif-smallcaps"
+                android:text="@string/CB"
+                android:textColor="#000000"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/team_chicago_score"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="12dp"
+                android:fontFamily="sans-serif-smallcaps"
+                android:text="@string/cb_final_score"
+                android:textColor="#000000"
+                android:textSize="40sp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-smallcaps"
+                    android:text="@string/fouls"
+                    android:textColor="#000000"
+                    android:textSize="14sp" />
+
+                <Button
+                    android:id="@+id/chicago_bull_foul"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="70dp"
+                    android:layout_height="40dp"
+                    android:onClick="chicagoFoulButton"
+                    android:text="@string/foulvalue" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:baselineAligned="false"
+                android:orientation="horizontal">
+
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+
+                    <FrameLayout
+                        android:layout_width="50dp"
+                        android:layout_height="50dp">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/cblauri"
+                            android:contentDescription="@string/lauri" />
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/shape_round_profile_pic"
+                            android:contentDescription="@string/lauri" />
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:layout_width="50dp"
+                        android:layout_height="50dp">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/cbbobby"
+                            android:contentDescription="@string/bobby" />
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/shape_round_profile_pic"
+                            android:contentDescription="@string/bobby" />
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:layout_width="50dp"
+                        android:layout_height="50dp">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/cbzack"
+                            android:contentDescription="@string/zack" />
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/shape_round_profile_pic"
+                            android:contentDescription="@string/zack" />
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:layout_width="50dp"
+                        android:layout_height="50dp">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/cbchris"
+                            android:contentDescription="@string/chris" />
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/shape_round_profile_pic"
+                            android:contentDescription="@string/chris" />
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:layout_width="50dp"
+                        android:layout_height="50dp">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/cbrobin"
+                            android:contentDescription="@string/robin" />
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/shape_round_profile_pic"
+                            android:contentDescription="@string/robin" />
+                    </FrameLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <Button
+                            style="?android:attr/buttonBarButtonStyle"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:onClick="lauri3ptButton"
+                            android:text="@string/three_point_buttons" />
+
+                        <Button
+                            style="?android:attr/buttonBarButtonStyle"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:onClick="lauri2ptButton"
+                            android:text="@string/two_point_buttons" />
+
+                        <Button
+                            style="?android:attr/buttonBarButtonStyle"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:onClick="lauri1ptButton"
+                            android:text="@string/one_point_buttons" />
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <Button
+                            style="?android:attr/buttonBarButtonStyle"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:onClick="bobby3ptButton"
+                            android:text="@string/three_point_buttons" />
+
+                        <Button
+                            style="?android:attr/buttonBarButtonStyle"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:onClick="bobby2ptButton"
+                            android:text="@string/two_point_buttons" />
+
+                        <Button
+                            style="?android:attr/buttonBarButtonStyle"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:onClick="bobby1ptButton"
+                            android:text="@string/one_point_buttons" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <Button
+                            style="?android:attr/buttonBarButtonStyle"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:onClick="zack3ptButton"
+                            android:text="@string/three_point_buttons" />
+
+                        <Button
+                            style="?android:attr/buttonBarButtonStyle"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:onClick="zack2ptButton"
+                            android:text="@string/two_point_buttons" />
+
+                        <Button
+                            style="?android:attr/buttonBarButtonStyle"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:onClick="zack1ptButton"
+                            android:text="@string/one_point_buttons" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <Button
+                            style="?android:attr/buttonBarButtonStyle"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:onClick="chris3ptButton"
+                            android:text="@string/three_point_buttons" />
+
+                        <Button
+                            style="?android:attr/buttonBarButtonStyle"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:onClick="chris2ptButton"
+                            android:text="@string/two_point_buttons" />
+
+                        <Button
+                            style="?android:attr/buttonBarButtonStyle"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:onClick="chris1ptButton"
+                            android:text="@string/one_point_buttons" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <Button
+                            style="?android:attr/buttonBarButtonStyle"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:onClick="robin3ptButton"
+                            android:text="@string/three_point_buttons" />
+
+                        <Button
+                            style="?android:attr/buttonBarButtonStyle"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:onClick="robin2ptButton"
+                            android:text="@string/two_point_buttons" />
+
+                        <Button
+                            style="?android:attr/buttonBarButtonStyle"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:onClick="robin1ptButton"
+                            android:text="@string/one_point_buttons" />
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="12dp"
+                android:fontFamily="sans-serif-smallcaps"
+                android:text="@string/BC"
+                android:textColor="#000000"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/team_boston_score"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="12dp"
+                android:fontFamily="sans-serif-smallcaps"
+                android:text="@string/bc_final_score"
+                android:textColor="#000000"
+                android:textSize="40sp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-smallcaps"
+                    android:text="@string/fouls"
+                    android:textColor="#000000"
+                    android:textSize="14sp" />
+
+                <Button
+                    android:id="@+id/boston_celtics_foul"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="70dp"
+                    android:layout_height="40dp"
+                    android:onClick="bostonFoulButton"
+                    android:text="@string/foulvalue" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:baselineAligned="false"
+                android:orientation="horizontal">
+
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+
+                    <FrameLayout
+                        android:layout_width="50dp"
+                        android:layout_height="50dp">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/bcdaniel"
+                            android:contentDescription="@string/daniel" />
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/shape_round_profile_pic"
+                            android:contentDescription="@string/daniel" />
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:layout_width="50dp"
+                        android:layout_height="50dp">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/bcgibson"
+                            android:contentDescription="@string/gibson" />
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/shape_round_profile_pic"
+                            android:contentDescription="@string/gibson" />
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:layout_width="50dp"
+                        android:layout_height="50dp">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/bcgreg"
+                            android:contentDescription="@string/greg" />
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/shape_round_profile_pic"
+                            android:contentDescription="@string/greg" />
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:layout_width="50dp"
+                        android:layout_height="50dp">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/bcaron"
+                            android:contentDescription="@string/aron" />
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/shape_round_profile_pic"
+                            android:contentDescription="@string/lauri" />
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:layout_width="50dp"
+                        android:layout_height="50dp">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/bcjaylen"
+                            android:contentDescription="@string/jaylen" />
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/shape_round_profile_pic"
+                            android:contentDescription="@string/jaylen" />
+                    </FrameLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <Button
+                            style="?android:attr/buttonBarButtonStyle"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:onClick="daniel3ptButton"
+                            android:text="@string/three_point_buttons" />
+
+                        <Button
+                            style="?android:attr/buttonBarButtonStyle"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:onClick="daniel2ptButton"
+                            android:text="@string/two_point_buttons" />
+
+                        <Button
+                            style="?android:attr/buttonBarButtonStyle"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:onClick="daniel1ptButton"
+                            android:text="@string/one_point_buttons" />
+                    </LinearLayout>
+
+
+                    <LinearLayout
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <Button
+                            style="?android:attr/buttonBarButtonStyle"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:onClick="gibson3ptButton"
+                            android:text="@string/three_point_buttons" />
+
+                        <Button
+                            style="?android:attr/buttonBarButtonStyle"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:onClick="gibson2ptButton"
+                            android:text="@string/two_point_buttons" />
+
+                        <Button
+                            style="?android:attr/buttonBarButtonStyle"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:onClick="gibson1ptButton"
+                            android:text="@string/one_point_buttons" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <Button
+                            style="?android:attr/buttonBarButtonStyle"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:onClick="greg3ptButton"
+                            android:text="@string/three_point_buttons" />
+
+                        <Button
+                            style="?android:attr/buttonBarButtonStyle"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:onClick="greg2ptButton"
+                            android:text="@string/two_point_buttons" />
+
+                        <Button
+                            style="?android:attr/buttonBarButtonStyle"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:onClick="greg1ptButton"
+                            android:text="@string/one_point_buttons" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <Button
+                            style="?android:attr/buttonBarButtonStyle"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:onClick="aron3ptButton"
+                            android:text="@string/three_point_buttons" />
+
+                        <Button
+                            style="?android:attr/buttonBarButtonStyle"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:onClick="aron2ptButton"
+                            android:text="@string/two_point_buttons" />
+
+                        <Button
+                            style="?android:attr/buttonBarButtonStyle"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:onClick="aron1ptButton"
+                            android:text="@string/one_point_buttons" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <Button
+                            style="?android:attr/buttonBarButtonStyle"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:onClick="jaylen3ptButton"
+                            android:text="@string/three_point_buttons" />
+
+                        <Button
+                            style="?android:attr/buttonBarButtonStyle"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:onClick="jaylen2ptButton"
+                            android:text="@string/two_point_buttons" />
+
+                        <Button
+                            style="?android:attr/buttonBarButtonStyle"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:onClick="jaylen1ptButton"
+                            android:text="@string/one_point_buttons" />
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="sans-serif-smallcaps"
+        android:onClick="ResetButton"
+        android:text="@string/resetButton"
+        android:textAllCaps="true" />
+
+</RelativeLayout>

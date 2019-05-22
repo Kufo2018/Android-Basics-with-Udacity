@@ -1,0 +1,67 @@
+<resources>
+    <string name="app_name">Courtcounterpersonal</string>
+
+    <string name="CB">Chicago Bulls</string>
+
+    <string name="BC">Boston Celtics</string>
+
+    <string name="twopointshot">2point Shot</string>
+
+    <string name="threepointshot">3point Shot</string>
+
+    <string name="freethrow">Free Throw</string>
+
+    <string name="scores">Final Score</string>
+
+    <string name="lineup">Lineups</string>
+
+    <string name="lauri">Lauri</string>
+
+    <string name="bobby">Bobby</string>
+
+    <string name="aron">Aron</string>
+
+    <string name="daniel">Daniel</string>
+
+    <string name="gibson">Gibson</string>
+
+    <string name="greg">Greg</string>
+
+    <string name="jaylen">Jaylen</string>
+
+    <string name="chris">Chris</string>
+
+    <string name="robin">Robin</string>
+
+    <string name="zack">Zack</string>
+
+    <string name="cb_final_score">0</string>
+
+    <string name="cb_three_point_shot">0</string>
+
+    <string name="cbtwopointshot">0</string>
+
+    <string name="cb_free_throw">0</string>
+
+    <string name="bc_final_score">0</string>
+
+    <string name="bc_three_point_shot">0</string>
+
+    <string name="bc_two_point_shot">0</string>
+
+    <string name="bc_free_throw">0</string>
+
+    <string name="three_point_buttons">+3</string>
+
+    <string name="two_point_buttons">+2</string>
+
+    <string name="one_point_buttons">+1</string>
+
+    <string name="resetButton">reset</string>
+
+    <string name="fouls">fouls</string>
+
+    <string name="foulvalue">0</string>
+
+
+</resources>
